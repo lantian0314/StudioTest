@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         String string="ceshi";
+        String string2="ceshi2";
     }
 
     @Override
