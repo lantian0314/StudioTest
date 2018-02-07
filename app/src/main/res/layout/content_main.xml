@@ -25,4 +25,11 @@
         android:text="OKHttp库的使用"
         android:layout_below="@id/btn_rxPermission"
         />
+    <Button
+        android:id="@+id/btn_glide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Glide库的使用"
+        android:layout_below="@id/btn_okhttp"
+        />
 </RelativeLayout>

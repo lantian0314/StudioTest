@@ -24,6 +24,7 @@
         </activity>
         <activity android:name=".RxPermission"></activity>
         <activity android:name=".OKHttp"></activity>
+        <activity android:name=".GlideActivity"></activity>
     </application>
 
 </manifest>

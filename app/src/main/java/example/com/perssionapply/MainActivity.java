@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private Button rxPermissionBtn = null;
     private Button btnOKHttp = null;
+    private Button btnGlide = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,8 +34,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
         rxPermissionBtn = (Button) findViewById(R.id.btn_rxPermission);
         btnOKHttp = (Button) findViewById(R.id.btn_okhttp);
+        btnGlide = (Button) findViewById(R.id.btn_glide);
         rxPermissionBtn.setOnClickListener(this);
         btnOKHttp.setOnClickListener(this);
+        btnGlide.setOnClickListener(this);
 
     }
 
@@ -46,6 +49,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_okhttp:
                 openActivity(OKHttp.class);
+                break;
+            case R.id.btn_glide:
+                openActivity(GlideActivity.class);
                 break;
         }
     }

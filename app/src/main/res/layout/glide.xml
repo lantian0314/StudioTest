@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_normal_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="加载正常的图片" />
+
+    <Button
+        android:id="@+id/btn_gif_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="加载GIF图片" />
+
+    <Button
+        android:id="@+id/btn_anima"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="加载动画效果" />
+
+    <Button
+        android:id="@+id/btn_size_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="加载图片的尺寸及设置缓存" />
+
+    <Button
+        android:id="@+id/btn_trans"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="图片的模糊" />
+
+
+    <ImageView
+        android:id="@+id/img_netnormal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
