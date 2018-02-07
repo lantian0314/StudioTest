@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "example.com.perssionapply"
-        minSdkVersion 9
+        minSdkVersion 11
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
@@ -28,4 +28,7 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.0.1'
     compile 'com.android.support:design:23.0.1'
+    compile 'com.tbruyelle.rxpermissions:rxpermissions:0.9.4@aar'
+    compile 'io.reactivex:rxandroid:1.0.1'
+    compile 'io.reactivex:rxjava:1.0.14'
 }

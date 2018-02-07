@@ -12,8 +12,10 @@
     tools:context="example.com.perssionapply.MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/btn_rxPermission"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="rxPermission动态申请权限"
+        />
 </RelativeLayout>

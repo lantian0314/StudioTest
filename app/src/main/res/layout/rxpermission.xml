@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/check_btn_rx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="检查权限" />
+
+    <Button
+        android:id="@+id/single_permission_rx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="单个权限检查" />
+
+    <Button
+        android:id="@+id/multi_permission_rx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="多个权限检查" />
+
+    <TextView
+        android:id="@+id/state_txt_rx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="权限状态" />
+</LinearLayout>
