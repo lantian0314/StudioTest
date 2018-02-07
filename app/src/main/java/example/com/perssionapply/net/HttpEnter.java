@@ -7,13 +7,17 @@ import android.os.Looper;
 import android.os.Message;
 import android.widget.Toast;
 
+import org.json.JSONObject;
+
 import java.io.IOException;
 
 import example.com.perssionapply.MainActivity;
 import okhttp3.Call;
 import okhttp3.Callback;
+import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
+import okhttp3.RequestBody;
 import okhttp3.Response;
 
 /**
@@ -49,6 +53,33 @@ public class HttpEnter {
                     message.what = MSG_GETSTATE;
                     message.obj = code;
                     mHandler.sendMessage(message);
+                }
+            });
+        } catch (Exception e) {
+
+        }
+    }
+
+    public void postRequest(String requestUrl, JSONObject mJsonObject) {
+        try {
+            //初始化OkHttpClient
+            OkHttpClient mOkHttpClient = new OkHttpClient();
+            //构造Json的请求对象
+            RequestBody mRequestBody = RequestBody.create(MediaType.parse("text/plain;chaset=utf-8"), mJsonObject.toString());
+            //构造Request对象
+            Request.Builder mBuilder=new Request.Builder();
+            Request request=mBuilder.post(mRequestBody).url(requestUrl).build();
+            //构造Call对象
+            Call mCall=mOkHttpClient.newCall(request);
+            mCall.enqueue(new Callback() {
+                @Override
+                public void onFailure(Call call, IOException e) {
+
+                }
+
+                @Override
+                public void onResponse(Call call, Response response) throws IOException {
+
                 }
             });
         } catch (Exception e) {
