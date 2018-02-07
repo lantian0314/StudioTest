@@ -16,6 +16,13 @@
         android:id="@+id/btn_rxPermission"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="rxPermission动态申请权限"
+        android:text="rxPermission动态申请权限" />
+
+    <Button
+        android:id="@+id/btn_okhttp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="OKHttp库的使用"
+        android:layout_below="@id/btn_rxPermission"
         />
 </RelativeLayout>

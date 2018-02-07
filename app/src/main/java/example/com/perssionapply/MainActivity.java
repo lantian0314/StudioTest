@@ -14,6 +14,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button rxPermissionBtn = null;
+    private Button btnOKHttp = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +32,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
         rxPermissionBtn = (Button) findViewById(R.id.btn_rxPermission);
+        btnOKHttp = (Button) findViewById(R.id.btn_okhttp);
         rxPermissionBtn.setOnClickListener(this);
+        btnOKHttp.setOnClickListener(this);
 
     }
 
@@ -39,11 +42,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_rxPermission:
-                Intent RxIntent = new Intent();
-                RxIntent.setClass(getApplicationContext(), RxPermission.class);
-                startActivity(RxIntent);
+                openActivity(RxPermission.class);
+                break;
+            case R.id.btn_okhttp:
+                openActivity(OKHttp.class);
                 break;
         }
+    }
+
+    private void openActivity(Class<?> openActivityClass) {
+        Intent RxIntent = new Intent();
+        RxIntent.setClass(getApplicationContext(), openActivityClass);
+        startActivity(RxIntent);
     }
 
     @Override
